@@ -1,5 +1,9 @@
 bin
 classes
+target
+.settings
+.project
+.classpath
 /附录A.pdf
 /附录B.pdf
 /Spring.3.x企业应用开发实战.pdf

@@ -14,7 +14,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import com.baobaotao.domain.User;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations={"/applicationContext.xml"})
+@ContextConfiguration(locations={"classpath:applicationContext.xml"})
 public class TestUserService {
 
 	@Autowired
