@@ -38,6 +38,7 @@ public class Car implements BeanFactoryAware, BeanNameAware, InitializingBean,
 	}
 
 	public void setColor(String color) {
+		System.out.println("调用setColor()设置属性。");
 		this.color = color;
 	}
 
@@ -46,6 +47,7 @@ public class Car implements BeanFactoryAware, BeanNameAware, InitializingBean,
 	}
 
 	public void setMaxSpeed(int maxSpeed) {
+		System.out.println("调用setMaxSpeed()设置属性。");
 		this.maxSpeed = maxSpeed;
 	}
 	
