@@ -10,7 +10,7 @@ import com.baobaotao.editor.Boss;
 public class TestCustomerEditor extends TestCase {
 	public ApplicationContext ctx = null;
 
-	private static String[] CONFIG_FILES = { "com/baobaotao/editor/beans.xml" };
+	private static String[] CONFIG_FILES = {"com/baobaotao/editor/beans.xml" };
 
 	public void setUp() throws Exception {
 		ctx = new ClassPathXmlApplicationContext(CONFIG_FILES);

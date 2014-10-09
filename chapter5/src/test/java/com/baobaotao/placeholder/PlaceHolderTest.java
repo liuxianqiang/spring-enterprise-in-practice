@@ -7,6 +7,8 @@ import javax.sql.DataSource;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.baobaotao.placeholder.MyDataSource;
+
 public class PlaceHolderTest {
 
 	public static void main(String[] args) throws Throwable {

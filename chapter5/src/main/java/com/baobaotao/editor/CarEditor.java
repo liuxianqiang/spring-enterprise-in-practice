@@ -2,7 +2,7 @@ package com.baobaotao.editor;
 
 import java.beans.PropertyEditorSupport;
 
-public class CustomCarEditor extends PropertyEditorSupport {
+public class CarEditor extends PropertyEditorSupport {
 	public void setAsText(String text){
 		if(text == null || text.indexOf(",") == -1){
 			throw new IllegalArgumentException("设置的字符串格式不正确");

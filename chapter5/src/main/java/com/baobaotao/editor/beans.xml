@@ -4,15 +4,15 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
          http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-	<bean class="org.springframework.beans.factory.config.CustomEditorConfigurer">
-		<property name="customEditors">
-			<map>
-				<entry key="com.baobaotao.editor.Car">
-					<bean class="com.baobaotao.editor.CustomCarEditor" />
-				</entry>
-			</map>
-		</property>
-	</bean>
+<!-- 	<bean class="org.springframework.beans.factory.config.CustomEditorConfigurer"> -->
+<!-- 		<property name="customEditors"> -->
+<!-- 			<map> -->
+<!-- 				<entry key="com.baobaotao.editor.Car"> -->
+<!-- 					<bean class="com.baobaotao.editor.CarEditor" /> -->
+<!-- 				</entry> -->
+<!-- 			</map> -->
+<!-- 		</property> -->
+<!-- 	</bean> -->
 	
     <bean id="boss" class="com.baobaotao.editor.Boss">
        <property name="name" value="John"/>

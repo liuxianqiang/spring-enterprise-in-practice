@@ -32,10 +32,10 @@ public class I18nGreeting {
 		MessageSource ms = (MessageSource)ctx.getBean("myResource2");
 		Object[] params = {"John", new GregorianCalendar().getTime()};
 		
-		for (int i = 0; i < 2; i++) {
+		for (int i = 0; i < 5; i++) {
 			String str1 = ms.getMessage("greeting.common",params,Locale.US);		
 			System.out.println(str1);
-			Thread.currentThread().sleep(20000);
+			Thread.currentThread().sleep(5000);
 		}	
 	}
 	

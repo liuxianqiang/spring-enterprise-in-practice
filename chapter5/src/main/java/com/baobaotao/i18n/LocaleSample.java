@@ -18,7 +18,7 @@ public class LocaleSample {
 	public static void dateFormat() {
 		Locale locale = new Locale("en", "US");
 		Date date = new Date();
-		DateFormat df = DateFormat.getDateInstance(DateFormat.MEDIUM, locale);
+		DateFormat df = DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.MEDIUM, locale);
 		System.out.println(df.format(date));
 	}
 
@@ -36,19 +36,19 @@ public class LocaleSample {
 	
 	public static void resourceBoundle(){
 		ResourceBundle rb1 = ResourceBundle.getBundle("com/baobaotao/i18n/resource",Locale.US);
-		ResourceBundle rb2 = ResourceBundle.getBundle("com/baobaotao/i18n/resource",Locale.CANADA);
+		ResourceBundle rb2 = ResourceBundle.getBundle("com/baobaotao/i18n/resource",Locale.UK);
 		System.out.println("us:"+rb1.getString("greeting.common"));
 		System.out.println("cn:"+rb2.getString("greeting.common"));
 	}
 	
 	public static void resourceBoundleFmt(){
 		ResourceBundle rb1 = ResourceBundle.getBundle("com/baobaotao/i18n/fmt_resource",Locale.US);
-		ResourceBundle rb2 = ResourceBundle.getBundle("com/baobaotao/i18n/fmt_resource",Locale.CHINA);
+		ResourceBundle rb2 = ResourceBundle.getBundle("com/baobaotao/i18n/fmt_resource",Locale.UK);
 		Object[] params = {"John", new GregorianCalendar().getTime()};
 		
 		String str1 = new MessageFormat(rb1.getString("greeting.common"),Locale.US).format(params);
-		String str2 =new MessageFormat(rb2.getString("greeting.morning"),Locale.CHINA).format(params);
-		String str3 =new MessageFormat(rb2.getString("greeting.afternoon"),Locale.CHINA).format(params);
+		String str2 =new MessageFormat(rb2.getString("greeting.morning"),Locale.UK).format(params);
+		String str3 =new MessageFormat(rb2.getString("greeting.afternoon"),Locale.UK).format(params);
 		System.out.println(str1);
 		System.out.println(str2);
 		System.out.println(str3);

@@ -71,7 +71,7 @@ public class DESUtils {
 //			}
 //		}
 		
-		System.out.println(getDecryptString("WnplV/ietfQ="));
-		System.out.println(getDecryptString("gJQ9O+q34qk="));
+		System.out.println(getEncryptString("root"));
+		System.out.println(getEncryptString("abc123_"));
 	}
 }

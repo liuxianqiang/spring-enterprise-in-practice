@@ -1,9 +1,5 @@
 package com.baobaotao.beanprop;
 
-import java.sql.Connection;
-
-import javax.sql.DataSource;
-
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
