@@ -10,7 +10,7 @@ public class TestDynamicAdvisor {
 		Waiter waiter = (Waiter) ctx.getBean("waiter2");		
 		waiter.serveTo("Peter");
 		waiter.greetTo("Peter");		
-		waiter.serveTo("Peter");
+		waiter.serveTo("John");
 		waiter.greetTo("John");
 	}
 }

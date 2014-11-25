@@ -12,33 +12,30 @@
 
 
 	<!--1. greetingAdvice -->
-	<!--
-		bean id="waiter"
-		class="org.springframework.aop.framework.ProxyFactoryBean"
-		p:proxyInterfaces="com.baobaotao.advice.Waiter" p:target-ref="target"
-		p:interceptorNames="greetingAdvice"/
-	-->
+<!-- 	<bean id="waiter" -->
+<!-- 		class="org.springframework.aop.framework.ProxyFactoryBean" -->
+<!-- 		p:proxyInterfaces="com.baobaotao.advice.Waiter" p:target-ref="target" -->
+<!-- 		p:interceptorNames="greetingAdvice"/> -->
 
 
 	<!--2. before and after advice -->
-	<!--
-		bean id="waiter"
+	<bean id="waiter"
 		class="org.springframework.aop.framework.ProxyFactoryBean"
 		p:proxyInterfaces="com.baobaotao.advice.Waiter" p:target-ref="target"
-		p:interceptorNames="greetingBefore,greetingAfter"/
-	-->
+		p:interceptorNames="greetingBefore,greetingAfter"/>
+
     <!--3. around advice -->
-	<bean id="waiter" class="org.springframework.aop.framework.ProxyFactoryBean"
-		p:proxyInterfaces="com.baobaotao.advice.Waiter" p:target-ref="target"
-		p:interceptorNames="greetingAround" />
+<!-- 	<bean id="waiter" class="org.springframework.aop.framework.ProxyFactoryBean" -->
+<!-- 		p:proxyInterfaces="com.baobaotao.advice.Waiter" p:target-ref="target" -->
+<!-- 		p:interceptorNames="greetingAround" /> -->
 
 
 	<!--4. 异常抛出增强  -->
-	<bean id="forumServiceTarget" class="com.baobaotao.advice.ForumService" />
-	<bean id="transactionManager" class="com.baobaotao.advice.TransactionManager" />
-	<bean id="forumService" class="org.springframework.aop.framework.ProxyFactoryBean"
-	  p:interceptorNames="transactionManager"
-	  p:target-ref="forumServiceTarget"
-	  p:proxyTargetClass="true"/>
+<!-- 	<bean id="forumServiceTarget" class="com.baobaotao.advice.ForumService" /> -->
+<!-- 	<bean id="transactionManager" class="com.baobaotao.advice.TransactionManager" /> -->
+<!-- 	<bean id="forumService" class="org.springframework.aop.framework.ProxyFactoryBean" -->
+<!-- 	  p:interceptorNames="transactionManager" -->
+<!-- 	  p:target-ref="forumServiceTarget" -->
+<!-- 	  p:proxyTargetClass="true"/> -->
 
 </beans>

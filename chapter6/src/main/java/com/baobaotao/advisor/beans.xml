@@ -7,7 +7,7 @@
 	http://www.springframework.org/schema/util 
 	http://www.springframework.org/schema/util/spring-util-3.0.xsd">
 
-	<!-- 普通方法名匹配切面 -->
+	<!-- 普通(静态)方法名匹配切面 -->
 	<bean id="waiterTarget" class="com.baobaotao.advisor.Waiter" />
 	<bean id="sellerTarget" class="com.baobaotao.advisor.Seller" />
 	<bean id="greetingAdvice" class="com.baobaotao.advisor.GreetingBeforeAdvice" />
@@ -36,7 +36,7 @@
 		p:proxyTargetClass="true" />
 
 
-	<!-- 动态切面 -->
+	<!-- 动态(方法)切面 -->
 	<bean id="dynamicAdvisor" class="org.springframework.aop.support.DefaultPointcutAdvisor">
 		<property name="pointcut">
 			<bean class="com.baobaotao.advisor.GreetingDynamicPointcut" />

@@ -7,9 +7,10 @@ public class TestBeforeAdvice {
 	public static void main(String[] args) {
         Waiter target = new NaiveWaiter();
         BeforeAdvice  advice = new GreetingBeforeAdvice();
+        
         ProxyFactory pf = new ProxyFactory();
         pf.setInterfaces(target.getClass().getInterfaces());
-        pf.setOptimize(true);
+//        pf.setOptimize(false);
         pf.setTarget(target);
         pf.addAdvice(advice);
 
