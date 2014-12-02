@@ -4,6 +4,7 @@ import com.baobaotao.anno.NeedTest;
 
 @Monitorable
 public class NaiveWaiter implements Waiter {
+	@NeedTest
 	public void greetTo(String clientName) {
 		System.out.println("NaiveWaiter:greet to "+clientName+"...");
 	}	

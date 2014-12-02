@@ -4,19 +4,20 @@ import org.aspectj.lang.ProceedingJoinPoint;
 
 
 public class AdviceMethods {
+	//前置增强
 	public void preGreeting(String name) {
 		System.out.println("--how are you!--");
 		System.out.println(name);
 	}
 
-    //后置增强对应方法
+    //后置增强
 	public void afterReturning(int retVal){
 	   System.out.println("----afterReturning()----");
 	   System.out.println("returnValue:"+retVal);
 	   System.out.println("----afterReturning()----");
 	}
 
-    //环绕增强对应方法
+    //环绕增强
 	public void aroundMethod(ProceedingJoinPoint pjp){
 	   System.out.println("----aroundMethod()----");
 	   System.out.println("args[0]:"+pjp.getArgs()[0]);
@@ -35,9 +36,7 @@ public class AdviceMethods {
 	   System.out.println("----afterMethod()----");
 	}
 	
-
-	
-      //------------绑定连接点参数----------//
+    //------------绑定连接点参数----------//
 	public void bindParams(int num,String name){
 	   System.out.println("----bindParams()----");
 	   System.out.println("name:"+name);
