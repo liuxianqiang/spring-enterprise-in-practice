@@ -16,18 +16,18 @@ public class JavaMailSender {
 		Transport transport = null;
 		try {
 			Properties props = new Properties();
-			props.put("mail.smtp.host", "smtp.163.com");
+			props.put("mail.smtp.host", "smtp.126.com");
 			props.put("mail.smtp.auth", "true");
 			Authenticator auth = new Authenticator() {
 				protected PasswordAuthentication getPasswordAuthentication() {
-					return new PasswordAuthentication("masterspring", "spring");
+					return new PasswordAuthentication("liu_xianqiang@126.com", "password");
 				}
 			};
 			Session session = Session.getDefaultInstance(props, auth);
 			Message msg = new MimeMessage(session);
-			msg.setFrom(new InternetAddress("masterspring@163.com"));
+			msg.setFrom(new InternetAddress("liu_xianqiang@126.com"));
 			msg.addRecipient(Message.RecipientType.TO, new InternetAddress(
-					"masterspring@sina.com"));
+					"1020746013@qq.com"));
 
 			msg.setSubject("Test Title");
 			msg.setSentDate(new Date());

@@ -24,14 +24,14 @@ public class JavaMailSslSender {
 		final String SSL_FACTORY = "javax.net.ssl.SSLSocketFactory";
 		// Get a Properties object
 		Properties props = System.getProperties();
-		props.setProperty("mail.smtp.host", "smtp.gmail.com");
+		props.setProperty("mail.smtp.host", "smtp.126.com");
 		props.setProperty("mail.smtp.socketFactory.class", SSL_FACTORY);
 		props.setProperty("mail.smtp.socketFactory.fallback", "false");
 		props.setProperty("mail.smtp.port", "465");
 		props.setProperty("mail.smtp.socketFactory.port", "465");
 		props.put("mail.smtp.auth", "true");
-		final String username = "masterspring3";
-		final String password = "masterspring";
+		final String username = "liu_xianqiang@126.com";
+		final String password = "password";
 		Session session = Session.getDefaultInstance(props,
 				new Authenticator() {
 					protected PasswordAuthentication getPasswordAuthentication() {
@@ -40,14 +40,14 @@ public class JavaMailSslSender {
 				});
 		Message msg = new MimeMessage(session);
 
-		msg.setFrom(new InternetAddress(username + "@gmail.com"));
+		msg.setFrom(new InternetAddress(username));
 		
 		msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse(
-				"masterspring@sina.com", false));
+				"1020746013@qq.com", false));
 		msg.setSubject("Hello");
 		msg.setText("How are you");
 		msg.setSentDate(new Date());
-		URLName urln = new URLName("smtps", "smtp.gmail.com", 465, null,
+		URLName urln = new URLName("smtps", "smtp.126.com", 465, null,
 				username, password);
         Transport t = session.getTransport(urln);
 		t.send(msg);

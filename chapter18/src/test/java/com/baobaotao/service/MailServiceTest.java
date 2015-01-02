@@ -16,14 +16,12 @@ public class MailServiceTest{
 
 
 	@Test
-	@Ignore
 	public void testSendSimpleMail() {
 		mailService.sendSimpleMail(100);
 		System.out.println("发送成功！");
 	}
 
 	@Test
-	@Ignore
 	public void testSendHtmlMail() {
 		try {
 			mailService.sendHtmlMail(100);
@@ -34,7 +32,6 @@ public class MailServiceTest{
 	}
 
 	@Test
-	@Ignore
 	public void testSendInlineMail() {
 		try {
 			mailService.sendInlineMail();
@@ -46,7 +43,6 @@ public class MailServiceTest{
 	}
 
 	@Test
-	@Ignore
 	public void testSendAttachmentMail() {
 		try {
 			mailService.sendAttachmentMail();
@@ -58,7 +54,6 @@ public class MailServiceTest{
 	}
 
 	@Test
-	@Ignore
 	public void testSendAlternativeMail() {
 		try {
 			mailService.sendAlternativeMail();
@@ -70,7 +65,6 @@ public class MailServiceTest{
 	}
 
 	@Test
-	@Ignore
 	public void testSendTemplateMail() {
 		try {
 			long s = System.currentTimeMillis();

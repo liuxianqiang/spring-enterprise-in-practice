@@ -11,8 +11,8 @@ public class JavaMailSslReceiver {
 	public static void main(String argv[]) throws Exception {
 		Properties props = new Properties();
 		Session session = Session.getDefaultInstance(props);
-		URLName urln = new URLName("pop3s", "pop.gmail.com", 995, null,
-				"masterspring3", "masterspring");
+		URLName urln = new URLName("pop3s", "pop.126.com", 995, null,
+				"liu_xianqiang@126.com", "password");
 		Store store = session.getStore(urln);
 		
 		Folder inbox = null;

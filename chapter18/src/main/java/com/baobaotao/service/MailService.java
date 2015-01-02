@@ -36,10 +36,10 @@ public class MailService {
 
 	public void sendSimpleMail(int userId) {
 		SimpleMailMessage msg = new SimpleMailMessage();
-		msg.setFrom("masterspring@163.com");
-		msg.setTo("masterspring3@gmail.com");
-		msg.setReplyTo("masterspring@163.com");
-		msg.setCc("masterspring@sina.com");
+		msg.setFrom("liu_xianqiang@126.com");
+		msg.setTo("1020746013@qq.com");
+		msg.setReplyTo("liu_xianqiang@126.com");
+		msg.setCc("1020746013@qq.com");
 		msg.setSubject("注册成功");
 		msg.setText("恭喜，您在宝宝淘论坛已经注册成功!您的用户ID为：" + userId);
 		sender.send(msg);
@@ -48,8 +48,8 @@ public class MailService {
 	public void sendHtmlMail(int userId) throws MessagingException {
 		MimeMessage msg = sender.createMimeMessage();
 		MimeMessageHelper helper = new MimeMessageHelper(msg, false, "utf-8");
-		helper.setFrom("masterspring@163.com");
-		helper.setTo("masterspring3@gmail.com");
+		helper.setFrom("liu_xianqiang@126.com");
+		helper.setTo("1020746013@qq.com");
 		helper.setSubject("注册成功");
 		String htmlText = "<html><head>"
 				+ "<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\">"
@@ -63,8 +63,8 @@ public class MailService {
 	public void sendInlineMail() throws MessagingException {
 		MimeMessage msg = sender.createMimeMessage();
 		MimeMessageHelper helper = new MimeMessageHelper(msg, true, "utf-8");
-		helper.setFrom("masterspring@163.com");
-		helper.setTo("masterspring3@gmail.com");
+		helper.setFrom("liu_xianqiang@126.com");
+		helper.setTo("1020746013@qq.com");
 		helper.setSubject("注册成功");
 		String htmlText = "<html><head>"
 				+ "<meta http-equiv=\"content-type\" content=\"text/html; charset=utf-8\">"
@@ -79,8 +79,8 @@ public class MailService {
 	public void sendAttachmentMail() throws Exception {
 		MimeMessage msg = sender.createMimeMessage();
 		MimeMessageHelper helper = new MimeMessageHelper(msg, true, "utf-8");
-		helper.setFrom("masterspring@163.com");
-		helper.setTo("masterspring3@gmail.com");
+		helper.setFrom("liu_xianqiang@126.com");
+		helper.setTo("1020746013@qq.com");
 		helper.setSubject("注册成功");
 		helper.setText("欢迎访问宝宝淘论坛！");
 		ClassPathResource file1 = new ClassPathResource("bbt.zip");
@@ -95,8 +95,8 @@ public class MailService {
 			public void prepare(MimeMessage msg) throws Exception {
 				MimeMessageHelper helper = new MimeMessageHelper(msg, true,
 						"utf-8");
-				helper.setFrom("masterspring@163.com");
-				helper.setTo("masterspring3@gmail.com");
+				helper.setFrom("liu_xianqiang@126.com");
+				helper.setTo("1020746013@qq.com");
 				helper.setSubject("注册成功");
 
 				MimeMultipart mmPart = new MimeMultipart("alternative");
@@ -122,8 +122,8 @@ public class MailService {
 	public void sendTemplateMail(int userId) throws MessagingException {
 		MimeMessage msg = sender.createMimeMessage();
 		MimeMessageHelper helper = new MimeMessageHelper(msg, false, "utf-8");
-		helper.setFrom("masterspring@163.com");
-		helper.setTo("masterspring3@gmail.com");
+		helper.setFrom("liu_xianqiang@126.com");
+		helper.setTo("1020746013@qq.com");
 		helper.setSubject("注册成功:基于模板");
 		String htmlText = getMailText(userId);
 		helper.setText(htmlText, true);
